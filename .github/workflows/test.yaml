@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      # - name: Intentionally fail the pipeline
-      #   run: exit 1
+      - name: Intentionally fail the pipeline
+        run: exit 1
 
       # This step will run regardless of the outcome of the previous s=
       - name: Notify dedicated teams channel on failure
