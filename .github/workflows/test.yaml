@@ -30,7 +30,7 @@ jobs:
 
       # This step will run only if the previous steps succeed
       - name: Notify dedicated teams channel on success
-        if: always() # Ensures this step runs even if the previous steps fail
+        if: always() && success() # Ensures this step runs only if all previous steps succeed
         uses: jdcargile/ms-teams-notification@v1.3
         with:
           github-token: ${{ github.token }} 
